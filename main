@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main (String [] args){
+        System.out.println("***||Ten program to prosta drukarka||***");
+        System.out.print("Wpisz jakis tekst do druku: ");
+        Scanner scanner = new Scanner(System.in);
+        String text = scanner.next();
+        System.out.print("Wpisz liczbe kopii: ");
+        int kopie = scanner.nextInt();
+        System.out.println("Czy wydrukowac podany przez Ciebie tekst?\n 1 - tak, 2 - nie");
+        int potwierdzenie = scanner.nextInt();
+        for(;potwierdzenie>2;){
+            System.out.println("Wybierz jeszcze raz!\n 1- tak, 2 - nie");
+            potwierdzenie = scanner.nextInt();
+        }
+
+        if(potwierdzenie==1){
+            int ilosc = 0;
+           while(ilosc < kopie){
+               System.out.println(text);
+               ilosc++;
+           }
+        }
+        else if(potwierdzenie==2){
+            System.out.println("Zrezygnowales z drukowania.");
+        }
+        else{
+            System.out.println("Jak tu doszedles?");
+        }
+
+
+
+    }
+}
